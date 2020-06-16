@@ -26,7 +26,6 @@ private:
     quint8  indx = 0;
     quint8  offset = 0;
     quint8  Parsing_error = 0;
-    quint32 TMK_open_error = 0;
     unsigned int BASE_ADRESS_H = 0;
 };
 
