@@ -12,6 +12,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     ui->textBrowser->setText("HEX - файл не прочитан! Выберете пункт меню: Файл->Открыть");
 
+    TMK_open_error = TmkOpen();
+    TMK_open_error += 2;
+
 
 }
 
@@ -25,8 +28,6 @@ void MainWindow::on_action_triggered()
     QString str = QFileDialog::getOpenFileName(nullptr, "Open Dialog", "", "*.hex *.bin");
     file.setFileName(str);
 
-    TMK_open_error = TmkOpen();
-    TMK_open_error += 2;
 
     if(file.open(QFile::ReadOnly))
     {
