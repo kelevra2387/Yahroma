@@ -13,9 +13,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->textBrowser->setText("HEX - файл не прочитан! Выберете пункт меню: Файл->Открыть");
 
 
-    TMK_open_error = TmkOpen();
-    TMK_open_error += 2;
-
 }
 
 MainWindow::~MainWindow()
